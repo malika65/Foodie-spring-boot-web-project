@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+
+    <title>Main Page</title>
+    <link rel="stylesheet" href="cssIndex.css?v=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+<div class="bgimg">
+    <div class="topleft">
+        <div class="w3-bar">
+            <form th:action="@{/menu}" method="get" class="menu-button">
+                <button class="w3-button w3-teal">Menu </button>
+            </form>
+            <br>
+            <form th:action="@{/order}" method="get" class="order-button">
+                <button class="w3-button w3-red" >Order</button>
+            </form>
+            <br>
+            <form th:action="@{/logout}" method="post" class="out-button">
+                <input type="submit" value="Sign Out"/>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="middle">
+    <h1>FOODIE</h1>
+
+    <p>We'll make you happy</p>
+</div>
+<div class="bottomleft">
+    <p></p>
+</div>
+</div>
+
+</body>
+</html>

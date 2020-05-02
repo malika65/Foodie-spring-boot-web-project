@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <title>Display Selected HTML Table TR Values In Input Text</title>
+    <link rel="stylesheet" href="css.css?v=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        table tr:not(:first-child){
+            cursor: pointer;transition: all .25s ease-in-out;
+        }
+        table tr:not(:first-child):hover{background-color: #ddd;}
+    </style>
+
+</head>
+<body>
+<textarea  id="description" rows="10" cols="50">
+
+</textarea>
+<!--/*@thymesVar id="Notes" type="order"*/-->
+<p th:if="${Notes}" class="order">Your order has been received</p>
+
+<input type="text" name="som" id="som">
+
+<h1 class="total">Total</h1>
+
+
+<div>
+    <input type="submit" name="save" class="form-group" value="Order" onclick="download()">
+
+</div>
+</form>
+<div>
+    <form th:action="@{/orderBack}" method="get">
+        <input type="submit" class="form-group1" value="Back">
+    </form>
+</div>
+<table id="table" border="2">
+    <tr>
+        <th>Dishes</th>
+        <th>Cost(som)</th>
+        <th>Portion</th>
+    </tr>
+
+    <tr>
+        <td>Classic Ramen</td>
+        <td>250</td>
+        <td>1</p></td>
+    </tr>
+    <tr>
+        <td>Ramen with chicken</td>
+        <td>270</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Ramen with vegetables</td>
+        <td>300</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Milky ramen</td>
+        <td>310</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Philadelphia</td>
+        <td>320</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Sake maki</td>
+        <td>330</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Fried rolls</td>
+        <td>340</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Seaweed</td>
+        <td>350</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Kinpira</td>
+        <td>360</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Classic salad</td>
+        <td>370</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Water</td>
+        <td>120</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Sake</td>
+        <td>200</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Tea</td>
+        <td>150</td>
+        <td>1</tr>
+    <tr>
+        <td>Cheesecake</td>
+        <td>220</td>
+        <td>1</tr>
+    <tr>
+        <td>Ice-cream</td>
+        <td>220</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<script>
+
+    var table = document.getElementById('table');
+    var total = 0;
+
+    for(var i = 1; i < table.rows.length; i++)
+    {
+        table.rows[i].onclick = function()
+        {
+
+            total += Number(this.cells[1].innerHTML);
+            document.getElementById("som").value = "";
+            document.getElementById("som").value +=total;
+            document.getElementById("description").value += "\n"+this.cells[0].innerHTML + "-" + this.cells[1].innerHTML;
+
+
+
+        };
+    }
+
+</script>
+
+    <script>
+        function download(){
+            var text = document.getElementById("description").value;
+
+            text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+            var blob = new Blob([text], { type: "text/plain"});
+            var anchor = document.createElement("a");
+            anchor.download = "result.txt";
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.target ="_blank";
+            anchor.style.display = "none"; // just to be safe!
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+
+
+            var som = document.getElementById("som").value;
+            som = som.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+            var blob1 = new Blob([som], { type: "text/plain"});
+            var anchor1 = document.createElement("a");
+            anchor1.download = "result1.txt";
+            anchor1.href = window.URL.createObjectURL(blob1);
+            anchor1.target ="_blank";
+            anchor1.style.display = "none"; // just to be safe!
+            document.body.appendChild(anchor1);
+            anchor1.click();
+            document.body.removeChild(anchor1);
+        }
+    </script>
+<script>
+
+</script>
+
+
+</body>
+</html>

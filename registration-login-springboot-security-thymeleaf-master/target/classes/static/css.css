@@ -1,0 +1,186 @@
+body{
+    background-image: url('https://casasensei.com/wp-content/uploads/2019/07/Asian-Food.jpg');
+    height: 100%;
+    background-color: #2323;
+    background-size: cover;
+
+}
+
+h1{
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+
+}
+input[type="text"],
+input[type="password"]{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding : 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.right-box{
+    color: white;
+    position: absolute;
+    top:0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/characters-3/512/1-02-512.png');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position:80px 40px;
+
+
+}
+.article  {
+    opacity: 0.9;
+    background: black;
+    padding: 27px;
+    width: 1400px;
+    height: 900px;
+    text-align: center;
+    margin-top: 0px;
+    position: absolute;
+    top: 35%;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+
+}
+.first{
+    width: 200px;
+    height:800px;
+    font-size: 19px;
+    position: absolute;
+
+}
+
+.second{
+    width: 200px;
+    height:800px;
+    font-size: 19px;
+    position: absolute;
+    margin-left: 300px;
+
+}
+.third{
+    width: 200px;
+    height:800px;
+    font-size: 19px;
+    position: absolute;
+    margin-left: 610px;
+
+}
+.fourth{
+    width: 200px;
+    height:800px;
+    font-size: 19px;
+    position: absolute;
+    margin-left: 900px;
+
+}
+.fifth{
+    width: 200px;
+    height:800px;
+    font-size: 19px;
+    position: absolute;
+    margin-left: 1170px;
+
+}
+.image{
+    width: 250px;
+    height: 250px;
+    margin-left: 600px;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.size{
+    font-size: 30px;
+    color: white;
+}
+.size1{
+    font-size: 40px;
+    color: blue;
+}
+.in {
+    width: 20em;  height: 5em;
+    margin-left: 25px;
+    float:left;
+}
+
+table, th, td {
+    border: 1px solid black;
+
+}
+#table{
+    position: absolute;
+    margin-left: 780px;
+    margin-top: 15%;
+}
+td:hover{
+    background-color: lightskyblue;
+}
+#table tr {
+    color: black;
+    border: 1px solid whitesmoke;
+
+}
+
+.num {
+    width: 2em;  height: 2em;
+    margin-left:5px;
+
+}
+.form-group {
+    position:absolute;
+    margin-left: 370px;
+    margin-top:34%;
+}
+.form-group1 {
+    color: blue;
+    position:absolute;
+    margin-left: 430px;
+    margin-top:34%;
+}
+.total{
+    color: white;
+    position: absolute;
+    margin-left: 600px;
+    margin-top:31%;
+
+}
+
+#description{
+    position:absolute;
+    margin-left: 370px;
+    margin-top:20%;
+;
+}
+#som{
+    position:absolute;
+    margin-left: 370px;
+    margin-top:31%;
+}
+.order{
+    color: white;
+    position: absolute;
+    margin-left: 370px;
+    margin-top:36%;
+
+}
+

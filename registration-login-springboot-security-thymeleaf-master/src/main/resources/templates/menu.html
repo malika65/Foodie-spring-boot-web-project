@@ -1,0 +1,68 @@
+<!Doctype html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+
+    <title>Menu page</title>
+    <link rel="stylesheet" href="css.css?v=1.0">
+
+</head>
+
+<body>
+<form th:action="@{/order}" method="get">
+    <input type="submit" class="in" value="Make order now">
+</form>
+<form th:action="@{/menuBack}" method="get">
+    <input type="submit" class="in"  value="BACK">
+</form>
+<article class="article">
+    <div class="first">
+        <h1 class="size1">Ramens</h1>
+        <h2 class="size">Classic ramen</h2>
+        <img src="https://www.seriouseats.com/images/2013/09/20130910-crispy-pork-miso-ramen-03-2.jpg">
+        <h2 class="size">Ramen with chicken</h2>
+        <img src="https://inquiringchef.com/wp-content/uploads/2016/10/Chicken-Ramen-Noodle-Bowl-3.jpg">
+        <h2 class="size">Ramen with vegetables</h2>
+        <img src="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/cheats-chicken-ramen.jpg?itok=JLVGQi62">
+        <h2 class="size">Milky ramen</h2>
+        <img src="https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/70422/retina_Tonkotsu_ramen.jpg">
+    </div>
+    <div class="second">
+        <h1 class="size1">Rolls and Sushi</h1>
+        <h2 class="size">Philadelphia</h2>
+        <img src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/2881197/910/606/m2/fpnw/wm1/a4kzolfdigsbmwnrzyui27zachez2hdu6syijyslynu2iddxmcbcb1nhhshelxfm-.jpg?1498135889&s=038f708f9ccae05345c7adc6e22ab3ad">
+        <h2 class="size">Sake maki</h2>
+        <img src="https://yummybook.org/upload/images/recipe/item/6616/large_20161202_72875c343e.JPG">
+        <h2 class="size">Fried rolls</h2>
+        <img src="https://d25t2285lxl5rf.cloudfront.net/images/dishes/86bc8fff-2b69-419d-b094-e67151bc5a8e.jpg">
+    </div>
+    <div class="third">
+        <h1 class="size1">Salads</h1>
+        <h2 class="size">Seaweed</h2>
+        <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/benefits-of-seaweed-1296x728-feature.jpg?w=1155&h=1528">
+        <h2 class="size">Kinpira</h2>
+        <img src="https://www.justonecookbook.com/wp-content/uploads/2012/01/Kinpira-Gobo-e1325741399397.jpg">
+        <h2 class="size">Classic salad</h2>
+        <img src="https://www.welcometothetable.coop/sites/default/files/Classic_Chopped_Salad.jpg">
+    </div>
+    <div class="fourth">
+        <h1 class="size1">Drinks</h1>
+        <h2 class="size">Water</h2>
+        <img src="https://5.imimg.com/data5/GV/DP/MY-3831378/500ml-plastic-water-bottle-500x500.jpg">
+        <h2 class="size">Sake</h2>
+        <img src="https://image.cookly.me/tr:h-544,w-824,pr-true,rt-auto/images/sake-tasting-lesson-with-a-sake-sommelier_sR4mIvi.jpg">
+        <h2 class="size">Tea</h2>
+        <img src="https://www.comunicaffe.com/wp-content/uploads/2019/12/close-up-of-a-cup-of-tea.jpg">
+    </div>
+    <div class="fifth">
+        <h1 class="size1">Deserts</h1>
+        <h2 class="size">Cheesecake</h2>
+        <img src="https://i2.wp.com/www.sugarspunrun.com/wp-content/uploads/2019/01/Best-Cheesecake-Recipe-2-1-of-1-4-500x500.jpg">
+        <h2 class="size">Ice-cream</h2>
+        <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/5/2/FNM_050112-Ted-Farmers-Market-001_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371606862953.jpeg">
+    </div>
+
+</article>
+
+</body>
+</html>
